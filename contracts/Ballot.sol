@@ -81,6 +81,7 @@ contract Ballot {
 
         for(uint p=0; p < proposals.length; p++){
             if(proposals[p].voteCount > winningVoteCount){
+                winningVoteCount = proposals[p].voteCount;
                 winningProposal_ = p;
             }
         }
